@@ -4,4 +4,5 @@ If someone asks me for something, and I can program it, this is where you can fi
 
 Table of Contents
 
-TBD :)
+LibreQDA MySQL Database manipulation with PyMySQL
+
