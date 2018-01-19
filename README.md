@@ -7,3 +7,4 @@ If someone asks me for something, and I can program it, this is where you can fi
     LibreQDA MySQL Database manipulation with PyMySQL
     WiGLE Wi-Fi Data analysis
     OpenCV facial recognition
+    Python API for blockchain.info
