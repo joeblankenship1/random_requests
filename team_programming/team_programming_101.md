@@ -80,30 +80,49 @@ At this point, we are prepared to start building our project.
 
 ##### Construction
 
-
+The first cycle in execution is that of building the initial prototype. This will be done in line with the aforementioned timeline, benchmarks, and VCS scheme. Predetermined times for peer/mob coding sessions should be adhered to as much as possible to ensure that all developers on the project are on the same page and consistently contribute to the project. This ensures that all team members are leveraging their strongest skill sets towards the best possible deliverable.
 
 ##### Integration
 
+Following each benchmark, code should be reviewed by the team and merged with the `master` branch to ensure progress and development knowledge are recorded. This includes the use of GitHub Wikipages, reorganization of GitHub Project cards (or a project management software of your choice), and drafting of basic documentation for that benchmark section. Adjustments to VCS practices, code quality assurance, and packaging should also be addressed during benchmark completion periods.
 
+This cycle will continue until the delivery date for the project with minor shifts afterwards of maintenance and monitoring is required.
 
 ##### Testing
 
+Testing can make or break a project. To ensure that your project works beyond delivery for any number of potential use cases, you should consider how to integrated testing and test automation. Every language has its own community led projects that assist developers with tasks such as unit tests, API tests, and any form of regression testing. These ensure that developers have designed and deployed applications with features that have 100% code coverage (tests have been created for all user interactions possible within your application). Python has `unittest` and `pytest` while JavaScript has `jest` and `testcafe` as a few of many suites for testing.
 
+These considerations should be considered before initial execution and should be revisited during benchmark completion periods by the development team.
 
 ##### Retrospectives
 
+Perhaps the most important aspect of team programming is that of continuous communication and collaboration. During each benchmark completion period and following final delivery of the project, the team should engage in retrospectives. These are sessions designed to address what when well, what could have gone better, and what could be used to improved to make future benchmarks and deliveries simpler and more efficient.
 
+As you can see above, each major aspect of execution has periods of retrospection built into the benchmark completion periods. This ensures not only better software development practices over time, but ensures collaboration between team members results in the building of a solid community.
 
 ### Release
 
+Prior to release, team members will want to under go final code reviews, code testing, and documentation drafting. This will not only assist during the potential management and maintenance of the software, but ultimately this will allow proper hand-off and training for users and implementers of your project. For simple projects, version numbers or `alpha` and `beta` releases may not be necessary. However, the conditions of a project’s requirements will dictate whether these will be used.
 
+Once the team agrees that the project meets and/or exceeds the requirements within the project scope, the software can be deployed/delivered. The manner in which this is done will be in line with the requirements outlined during the initial phases of the project.
 
 ##### Management & Monitor
 
+Often with small, open-source projects, you will not think about management or monitoring of your project once it is deployed (e.g., a JavaScript web application deployed via GitHub Pages). However, these may have API dependencies of external library dependencies that could break over time.
 
+As a developer, you must ensure that if you have designed software that others are using for professional and/or personal reasons (especially if this is a paid service), that you have taken the due diligence to account for management and monitoring of dependencies your software uses. There are several options:
+
+* Download and store dependencies with your software
+* Create virtual environments or containers that freeze dependencies
+* Make explicit calls to dependency versions accompanied by error handling/logging/message services
+* Use a third party monitoring service for your software
+
+It is ultimately up to the development team and end users to navigate these issues based on their needs, use cases, and budgets.
 
 ### Conclusion
 
+Hopefully this has been a useful guide for newcomers to team programming. These are not rules or immutable laws, but suggestions gleaned from many experienced developers and programmers that may make your projects exciting experiences rather than collaborative nightmares.
 
+Over time, team members will figure out how they work best in accomplishing tasks, but initially this can seem like a burdensome, confusing, and downright scary set of thoughts. The key is to keep open, persistent, and constructive communication with your team members about what, how, and why you are doing what you are doing to get the tasks completed on time.
 
 
