@@ -6,9 +6,9 @@ For any software development project, team organization and dynamics are extreme
 
 ![images](img/devops.svg)
 
-If you are co-located with the people that you are developing software, you can try approaches such as peer programming or mob programming where one person codes while others sit beside them assisting with the program design, allowing all to use their strengths for the benefit of the group. In a remote setting, there are ways to overcome this such as live video chat sessions and use of linked editors such as Atom Teletype.
+If you are co-located with your software development team, you can try approaches such as peer programming or mob programming where one person codes while others sit beside them assisting with the program design, allowing all to use their strengths for the benefit of the group. In a remote setting, there are ways to overcome this such as live video chat sessions and use of linked editors such as Atom Teletype.
 
-However, this is often not feasible for open-source projects. Aside from occasional code sprints and hackathons, open-source projects are generally coordinated through the version control system (VCS)(e.g., Git) and/or project management software (e.g., JIRA, Confluence, Trello, GitHub Project Boards, Slack). These tools allow people and teams to efficiently coordinate their work on a project anywhere, anytime.
+However, this is often not feasible for open-source projects. Aside from occasional code sprints and hackathons, open-source projects are generally coordinated through a version control system (VCS)(e.g., Git) and/or project management software (e.g., JIRA, Confluence, Trello, GitHub Project Boards, Slack). These tools allow people and teams to efficiently coordinate their work on a project anywhere, anytime.
 
 The team programming method I am proposing here will use a mix of the aforementioned methods and tools to accomplish a collaborative software development task. The flow of iterative cycles are as follows.
 
@@ -52,17 +52,19 @@ Once your team has figured out what needs to be done, who is working on what par
 
 ### Benchmarks
 
-In the course of establishing your timeline, you will want to need to bin your tasks in between the start date of the project and the expected delivery date of your completed project. This process of deciding what should be done by when is best accomplished through the use of benchmarks. Benchmarks are meta categories within which tasks and sub-tasks are placed to best complete key aspects of a project’s requirements. For example, `collection of data`, `data cleaning`, and `data storage` can be binned in a meta category of `data processing`. This category would then be optimally placed along the timeline to support other meta categories, ultimately pushing the project forward as efficiently as possible.
+In the course of establishing your timeline, you will need to bin your tasks in between the start date of the project and the expected delivery date of your completed project. This process of deciding what should be done by when is best accomplished through the use of benchmarks. Benchmarks are meta categories within which tasks and sub-tasks are placed to best complete key aspects of a project’s requirements. For example, `collection of data`, `data cleaning`, and `data storage` can be binned in a meta category of `data processing`. This category would then be optimally placed along the timeline to support other meta categories, ultimately pushing the project forward as efficiently as possible.
 
 It is critical that time be taken to properly plan a timeline up front before real work is done on a given software project. This is because a well made timeline will easily become the branching scheme within your VCS. For example, if you have two people working on the `data processing` meta category, they can create the `data processing` branch, commit the tasks and sub-tasks to the branch, and then submit a pull request (PR) once the meta category is complete. The timeline established by the team should have provided them with the division of labor and deadlines for the tasks and sub-tasks, ensuring other teams receive their data on the expected dates.
 
 ### Scheduling
 
-Due to the distributed nature of team members for many open	-source projects, it is important to properly schedule meetings and deadlines in a common time zone. Additionally, the timeline should also note absences, vacations, or other know dates/times team members will be unavailable for contact, meetings, or peer/mob coding sessions.
+Due to the distributed nature of team members for many open	-source projects, it is important to properly schedule meetings and deadlines in a common time zone. Additionally, the timeline should also note absences, vacations, or other known dates/times team members will be unavailable for contact, meetings, or peer/mob coding sessions.
 
-Keep in mind that if you are a part of a project, that project is now a job and should be treated as such. You should commit specific times to working on this project and its your responsibility to communication those times to your team and peer coder. Many aspects of remote work and collaborations are challenging and not being able to commit to a dedicated work schedule makes it hard on team members who may be working with you on a given set of tasks.
+Keep in mind that if you are a part of a project, that project is now a job and should be treated as such. You should commit specific times to working on this project and its your responsibility to communication those times to your team and peer coders. Many aspects of remote work and collaborations are challenging and not being able to commit to a dedicated work schedule makes it hard on team members who may be working with you on a given set of tasks.
 
 Make sure that any changes to scheduling are updated as soon as possible within the timeline, project management tools, and chat tools. This will let team members know what is going on and can then adjust scheduling and tasks accordingly.
+
+All of the above should be recorded in a common set of tools of which team members have persistent access to throughout the project. Expectations of access and contributions through these tools should also be outlined before a team starts building a given project. These expectations include various leadership roles for code review, task board updates, calendar changes, and meet agendas for teams and sub-teams. Once these challenges have been resolved, building a project becomes much more efficient.
 
 ### Execution
 
@@ -86,7 +88,7 @@ The first cycle in execution is that of building the initial prototype. This wil
 
 Following each benchmark, code should be reviewed by the team and merged with the `master` branch to ensure progress and development knowledge are recorded. This includes the use of GitHub Wikipages, reorganization of GitHub Project cards (or a project management software of your choice), and drafting of basic documentation for that benchmark section. Adjustments to VCS practices, code quality assurance, and packaging should also be addressed during benchmark completion periods.
 
-This cycle will continue until the delivery date for the project with minor shifts afterwards of maintenance and monitoring is required.
+This cycle will continue until the delivery date for the project with minor shifts afterwards if maintenance and monitoring is required.
 
 ##### Testing
 
@@ -96,21 +98,21 @@ These considerations should be considered before initial execution and should be
 
 ##### Retrospectives
 
-Perhaps the most important aspect of team programming is that of continuous communication and collaboration. During each benchmark completion period and following final delivery of the project, the team should engage in retrospectives. These are sessions designed to address what when well, what could have gone better, and what could be used to improved to make future benchmarks and deliveries simpler and more efficient.
+Perhaps the most important aspect of team programming is that of continuous communication and collaboration. During each benchmark completion period and following final delivery of the project, the team should engage in retrospectives. These are sessions designed to address what when well, what could have gone better, and what could be used to improve various processes. This ultimately makes future benchmarks and deliveries simpler and more efficient.
 
 As you can see above, each major aspect of execution has periods of retrospection built into the benchmark completion periods. This ensures not only better software development practices over time, but ensures collaboration between team members results in the building of a solid community.
 
 ### Release
 
-Prior to release, team members will want to under go final code reviews, code testing, and documentation drafting. This will not only assist during the potential management and maintenance of the software, but ultimately this will allow proper hand-off and training for users and implementers of your project. For simple projects, version numbers or `alpha` and `beta` releases may not be necessary. However, the conditions of a project’s requirements will dictate whether these will be used.
+Prior to release, team members will want to undergo final code reviews, code testing, and documentation drafting. This will not only assist in the potential management and maintenance of the software, but ultimately this will allow proper hand-off and training for users and implementers of your project. For simple projects, version numbers, `alpha`, and/or `beta` releases may not be necessary. However, the conditions of a project’s requirements will dictate whether these will be used.
 
 Once the team agrees that the project meets and/or exceeds the requirements within the project scope, the software can be deployed/delivered. The manner in which this is done will be in line with the requirements outlined during the initial phases of the project.
 
 ##### Management & Monitor
 
-Often with small, open-source projects, you will not think about management or monitoring of your project once it is deployed (e.g., a JavaScript web application deployed via GitHub Pages). However, these may have API dependencies of external library dependencies that could break over time.
+Often with small, open-source projects, you will not think about management or monitoring of your project once it is deployed (e.g., a JavaScript web application deployed via GitHub Pages). However, these may have API dependencies or external library dependencies that could break over time.
 
-As a developer, you must ensure that if you have designed software that others are using for professional and/or personal reasons (especially if this is a paid service), that you have taken the due diligence to account for management and monitoring of dependencies your software uses. There are several options:
+As a developer, you must ensure that if you have designed software that others are using for professional and/or personal reasons (especially if this is a paid service), that you have accounted for management and monitoring of dependencies your software uses. There are several options:
 
 * Download and store dependencies with your software
 * Create virtual environments or containers that freeze dependencies
@@ -124,5 +126,4 @@ It is ultimately up to the development team and end users to navigate these issu
 Hopefully this has been a useful guide for newcomers to team programming. These are not rules or immutable laws, but suggestions gleaned from many experienced developers and programmers that may make your projects exciting experiences rather than collaborative nightmares.
 
 Over time, team members will figure out how they work best in accomplishing tasks, but initially this can seem like a burdensome, confusing, and downright scary set of thoughts. The key is to keep open, persistent, and constructive communication with your team members about what, how, and why you are doing what you are doing to get the tasks completed on time.
-
 
