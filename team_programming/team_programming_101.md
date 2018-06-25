@@ -6,7 +6,7 @@ For any software development project, team organization and dynamics are extreme
 
 ![images](img/devops.svg)
 
-If you are co-located with your software development team, you can try approaches such as peer programming or mob programming where one person codes while others sit beside them assisting with the program design, allowing all to use their strengths for the benefit of the group. In a remote setting, there are ways to overcome this such as live video chat sessions and use of linked editors such as Atom Teletype.
+If you are co-located with your software development team, you can try approaches such as [pair programming](https://en.wikipedia.org/wiki/Pair_programming) or [mob programming](https://en.wikipedia.org/wiki/Mob_programming) where one person codes while others sit beside them assisting with the program design, allowing all to use their strengths for the benefit of the group. In a remote setting, there are ways to overcome this such as live video chat sessions and use of linked editors such as Atom Teletype.
 
 However, this is often not feasible for open-source projects. Aside from occasional code sprints and hackathons, open-source projects are generally coordinated through a version control system (VCS)(e.g., Git) and/or project management software (e.g., JIRA, Confluence, Trello, GitHub Project Boards, Slack). These tools allow people and teams to efficiently coordinate their work on a project anywhere, anytime.
 
@@ -42,9 +42,9 @@ Getting to know your peers is not always necessary in developing open-source pro
 
 ##### Location
 
-Ideally, you and your team would be co-located so that peer coding and mob coding practices could be achieved in a positive social space. But the nature of open-source projects and collaboration often involves one or more members of a team being either partially or completely remote. This means that those that cannot meet in person will need to find alternative ways to co-locate with their peers.
+Ideally, you and your team would be co-located so that pair coding and mob coding practices could be achieved in a positive social space. But the nature of open-source projects and collaboration often involves one or more members of a team being either partially or completely remote. This means that those that cannot meet in person will need to find alternative ways to co-locate with their peers.
 
-Communication channels are perhaps the most important to facilitate good team dynamics. Slack, Discord, and IRC are good places to text chat and to share code snippets with one another. Discord, Zoom, or Hangouts can also facilitate voice, video, and screen sharing which will come in handy for peer or mob coding sessions. Signal and Wire are good alternatives if your team requires secure communications. You may also want to consider text editors and IDEs with live coding features such as Atom’s Teletype. 
+Communication channels are perhaps the most important to facilitate good team dynamics. Slack, Discord, and IRC are good places to text chat and to share code snippets with one another. Discord, Zoom, or Hangouts can also facilitate voice, video, and screen sharing which will come in handy for pair or mob coding sessions. Signal and Wire are good alternatives if your team requires secure communications. You may also want to consider text editors and IDEs with live coding features such as Atom’s Teletype. 
 
 ##### Timeline
 
@@ -58,13 +58,47 @@ It is critical that time be taken to properly plan a timeline up front before re
 
 ### Scheduling
 
-Due to the distributed nature of team members for many open	-source projects, it is important to properly schedule meetings and deadlines in a common time zone. Additionally, the timeline should also note absences, vacations, or other known dates/times team members will be unavailable for contact, meetings, or peer/mob coding sessions.
+Due to the distributed nature of team members for many open	-source projects, it is important to properly schedule meetings and deadlines in a common time zone. Additionally, the timeline should also note absences, vacations, or other known dates/times team members will be unavailable for contact, meetings, or pair/mob coding sessions.
 
-Keep in mind that if you are a part of a project, that project is now a job and should be treated as such. You should commit specific times to working on this project and its your responsibility to communication those times to your team and peer coders. Many aspects of remote work and collaborations are challenging and not being able to commit to a dedicated work schedule makes it hard on team members who may be working with you on a given set of tasks.
+Keep in mind that if you are a part of a project, that project is now a job and should be treated as such. You should commit specific times to working on this project and its your responsibility to communication those times to your team. Many aspects of remote work and collaborations are challenging and not being able to commit to a dedicated work schedule makes it hard on team members who may be working with you on a given set of tasks.
 
 Make sure that any changes to scheduling are updated as soon as possible within the timeline, project management tools, and chat tools. This will let team members know what is going on and can then adjust scheduling and tasks accordingly.
 
 All of the above should be recorded in a common set of tools of which team members have persistent access to throughout the project. Expectations of access and contributions through these tools should also be outlined before a team starts building a given project. These expectations include various leadership roles for code review, task board updates, calendar changes, and meet agendas for teams and sub-teams. Once these challenges have been resolved, building a project becomes much more efficient.
+
+### Pre-execution
+
+Now that planning, benchmarks, and scheduling are outlined and agreed upon, you now have to ensure that those plans are reflected in the code that is produced by the team. We do this through the use of GitFlow.
+
+##### GitFlow
+
+GitFlow is a Git branching model largely attributed to [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/). This involves the use of several branch types that interact with one another to ensure that the Master branch of any project is always 100% functional.
+
+![images](img/gitflow.png)
+
+Here is a brief list of the branches and concepts, but for the fullest understanding of this model, you should read the blog post linked above.
+
+* **Master Branch** - This is your primary production branch. Code should always be at 100% test coverage and functionality at any point in the version control history of this branch.
+* **Develop Branch** - This is your primary working branch. This branch ensures that feature branch merges/rebases are tested and functional. This branch also feeds the release branch ensuring that all bugs are reviewed and fixed before being pushed to master.
+* **Hotfixes Branch** - This branch is for emergency code fixes to the master branch. Hotfixes are also pushed to the develop branch to ensure errors are accounted for in future releases. Hotfixes are often versioned as `minor` or bug releases (e.g., version 0.2).
+* **Release Branch** - This is the intermediate branch that prepares `major` releases for production on the master branch (e.g., version 1.0).
+* **Feature Branches** - These branches are what build your application. These are generally created to address a single requirement or group of requirements that are then integrated into the develop branch for overall application testing and review.
+
+These practices should apply to small and large projects alike; practicing these helps you integrate faster into other open-source or work projects over time. It is up to your team to establish what requirements are built into feature branches and how those features are integrated into the develop branch. Likewise, your team must also establish what constitutes a `major` release depending on the scale and duration of a project. Ultimately, working between the develop and release branches prevents your team from pushing untested, buggy code to your master branch.
+
+##### Testing
+
+Testing you code as you build is very important. Not only does it ensure that what you are working on functions the way it should, it makes sure that your code works with everyone elses within the larger product. How you build tests and what tools you use for tests are largely dictates by your team and the languages you are working in to build your project. Here is a brief list of guidelines:
+
+* Tests should be built for small units of functionality to ensure they work correctly.
+* Tests must be able to run independently
+* Tests should run fast
+* Write broken tests to remind you what you need to do next
+* Write long, descriptive names for your tests
+* Run tests each time before you start coding
+* Run tests before you push your code
+
+Even if you are building a project by yourself, it is good practice to build tests as you code. You may want to read a bit more about [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) and [unit testing](https://en.wikipedia.org/wiki/Unit_testing) focusing on the languages you are using and the application spaces into which you plan to deploy your code.
 
 ### Execution
 
@@ -82,7 +116,7 @@ At this point, we are prepared to start building our project.
 
 ##### Construction
 
-The first cycle in execution is that of building the initial prototype. This will be done in line with the aforementioned timeline, benchmarks, and VCS scheme. Predetermined times for peer/mob coding sessions should be adhered to as much as possible to ensure that all developers on the project are on the same page and consistently contribute to the project. This ensures that all team members are leveraging their strongest skill sets towards the best possible deliverable.
+The first cycle in execution is that of building the initial prototype. This will be done in line with the aforementioned timeline, benchmarks, and VCS scheme. Predetermined times for pair/mob coding sessions should be adhered to as much as possible to ensure that all developers on the project are on the same page and consistently contribute to the project. This ensures that all team members are leveraging their strongest skill sets towards the best possible deliverable.
 
 ##### Integration
 
