@@ -9,6 +9,7 @@ pandas = "*"
 "beautifulsoup4" = "*"
 requests = "*"
 geopy = "*"
+matplotlib = "*"
 
 [dev-packages]
 
