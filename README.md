@@ -8,8 +8,11 @@ If someone asks me for something, and I can program it, this is where you can fi
     WiGLE Wi-Fi Data analysis
     OpenCV facial recognition
     Python API for blockchain.info
-	Team Programming 101
-	Basic web scraping example
-	UKPD Crime log analysis
-	US Patent network analysis
-	Bitnodes analysis
+    Team Programming 101
+    Basic web scraping example
+    UKPD Crime log analysis
+    US Patent network analysis
+    Bitnodes analysis
+    Python API for Meetup.com
+    Setup file for Vim
+
