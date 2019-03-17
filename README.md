@@ -15,4 +15,6 @@ If someone asks me for something, and I can program it, this is where you can fi
     Bitnodes analysis
     Python API for Meetup.com
     Setup file for Vim
+    Dash app demo
+    Fletcher Keyboard Setup
 
