@@ -15,5 +15,5 @@ def pdf_to_text(filename):
     return pdf_text
 
 def text_to_md(text):
-    text_file = text
-    
+    with open('output.md', 'w') as f:
+        f.write(text)
