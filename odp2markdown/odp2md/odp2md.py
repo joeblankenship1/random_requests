@@ -12,8 +12,5 @@ def pdf_to_text(filename):
     pdf_file = str(data_dir / filename)
     pdf_data = PDFx(pdf_file)
     pdf_text = pdf_data.get_text()
-    return pdf_text
-
-def text_to_md(text):
-    with open('output.md', 'w') as f:
-        f.write(text)
+    with open(f'{filename}.md', 'w') as f:
+        f.write(pdf_text)
