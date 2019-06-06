@@ -28,7 +28,10 @@ def clean_text(filename):
     This function cleans up bullets and other markings
     from the ODP format that transferred into markdown
     """
-    pass
+    with open(filename) as f:
+        for line in f:
+            str(line).replace('–', '  *')
+            str(line).replace('●', '*')
 
 def extract_images(filename, output_dir):
     """
