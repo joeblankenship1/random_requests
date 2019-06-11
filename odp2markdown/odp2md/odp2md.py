@@ -20,7 +20,7 @@ def pdf_to_text(filename):
     pdf_file = str(data_dir / filename)
     pdf_data = PDFx(pdf_file)
     pdf_text = pdf_data.get_text()
-    with open(f'{filename}.md', 'w') as f:
+    with open(f'{filename}.txt', 'w') as f:
         f.write(pdf_text)
 
 def clean_text(filename):
@@ -28,10 +28,12 @@ def clean_text(filename):
     This function cleans up bullets and other markings
     from the ODP format that transferred into markdown
     """
-    with open(filename) as f:
-        for line in f:
-            str(line).replace('–', '  *')
-            str(line).replace('●', '*')
+    with open(f'{filename}.md', 'w') as new_file:
+        with open(filename, 'r') as old_file:
+            for line in old_file:
+                new_file.write(str(line).replace('–', '  *'))
+                new_file.write(str(line).replace('●', '*'))
+    # os.remove(filename)
 
 def extract_images(filename, output_dir):
     """
