@@ -31,8 +31,12 @@ def clean_text(filename):
     with open(f'{filename}.md', 'w') as new_file:
         with open(filename, 'r') as old_file:
             for line in old_file:
-                new_file.write(str(line).replace('–', '  *'))
-                new_file.write(str(line).replace('●', '*'))
+                if line.find('–') != -1:
+                    new_file.write(str(line).replace('–', '  *'))
+                elif line.find('●') != -1:
+                    new_file.write(str(line).replace('●', '*'))
+                else:
+                    new_file.write(str(line))
     # os.remove(filename)
 
 def extract_images(filename, output_dir):
