@@ -37,7 +37,7 @@ def clean_text(filename):
                     new_file.write(str(line).replace('●', '*'))
                 else:
                     new_file.write(str(line))
-    # os.remove(filename)
+    os.remove(filename)
 
 def extract_images(filename, output_dir):
     """
