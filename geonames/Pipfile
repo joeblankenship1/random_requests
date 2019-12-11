@@ -12,6 +12,8 @@ numpy = "*"
 dask = "*"
 matplotlib = "*"
 jupyter = "*"
+toolz = "*"
+fsspec = "*"
 
 [requires]
 python_version = "3.7"

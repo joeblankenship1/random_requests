@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5f2583aab61d5e2d37f2a028b206da5fc950718c1d01cc7bb4098f6f499aa0b7"
+            "sha256": "40e52b6a00f4c69590ade978af9df8530d8526cb80b2bbc23befb33e0ad1d23d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -80,6 +80,14 @@
             ],
             "index": "pypi",
             "version": "==3.7.9"
+        },
+        "fsspec": {
+            "hashes": [
+                "sha256:290debb1dc458c001e8f0bd128004ffdb93bc1a33d345bf71ae16581d2f55b9f",
+                "sha256:f29f0085698f10155af20333387eae82ee785a15d5fd7d0fcc36680236522bbd"
+            ],
+            "index": "pypi",
+            "version": "==0.6.1"
         },
         "importlib-metadata": {
             "hashes": [
@@ -522,6 +530,13 @@
                 "sha256:bfcf9411ef4bf3db7579063e0546938b1edda3d69f4e1fb8756991f5951f85d4"
             ],
             "version": "==0.4.4"
+        },
+        "toolz": {
+            "hashes": [
+                "sha256:08fdd5ef7c96480ad11c12d472de21acd32359996f69a5259299b540feba4560"
+            ],
+            "index": "pypi",
+            "version": "==0.10.0"
         },
         "tornado": {
             "hashes": [
