@@ -33,4 +33,15 @@ hierarchy_df = pd.read_csv(hierarchy_raw, delimiter='\t', header=None)
 hierarchy_city = hierarchy_df.loc[hierarchy_df[2] == 'ADM']
 
 # %%
-# reformat from, to, edge value in neptune format
+"""
+reformat from, to, edge value in neptune format
+
+vertex
+~id, name:String, age:Int, lang:String, ~label
+v1, "marko", 29, , person
+v2, "lop", , "java", software
+
+edge
+~id, ~from, ~to, ~label, weight:Double
+e1, v1, v2, created, 0.4
+"""
