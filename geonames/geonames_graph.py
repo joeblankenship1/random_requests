@@ -15,9 +15,9 @@ PPLA4 (ca 185.000), see 'geoname' table for columns
 import pandas as pd
 
 # %%
-hierarchy_raw = '~Downloads/geonames/hierarchy.txt'
-cities_500_raw = '~Downloads/geonames/cities500.txt'
-countries_raw = '~Downloads/geonames/countryInfo.txt'
+hierarchy_raw = '~/Downloads/geonames/hierarchy.txt'
+cities_500_raw = '~/Downloads/geonames/cities500.txt'
+countries_raw = '~/Downloads/geonames/countryInfo.txt'
 
 # %%
 city_500_df = pd.read_csv(cities_500_raw, delimiter='\t', header=None)
@@ -30,6 +30,7 @@ country_ids_df = countryinfo_df[['ISO', 'geonameid']]
 
 # %%
 hierarchy_df = pd.read_csv(hierarchy_raw, delimiter='\t', header=None)
-hierarchy_city = hierarchy_df.loc[hierarchy_df[2] == 'city']
+hierarchy_city = hierarchy_df.loc[hierarchy_df[2] == 'ADM']
 
+# %%
 # reformat from, to, edge value in neptune format
