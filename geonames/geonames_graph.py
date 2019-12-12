@@ -45,3 +45,7 @@ edge
 ~id, ~from, ~to, ~label, weight:Double
 e1, v1, v2, created, 0.4
 """
+
+# %%
+city_ids_df.to_csv('city_nodes.csv')
+hierarchy_city.to_csv('hierarchy_edges.csv')
