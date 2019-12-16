@@ -46,7 +46,6 @@ def extract_images(filename, output_dir):
     """
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
- 
     cmd = ['pdfimages', '-all', filename, 
            '{}/prefix'.format(output_dir)]
     subprocess.call(cmd)
