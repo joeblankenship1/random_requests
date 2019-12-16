@@ -1,3 +1,4 @@
+# %%
 import os
 import subprocess
 from pathlib import Path
@@ -5,6 +6,7 @@ from pdfx import PDFx
 
 data_dir = Path('.')
 
+# %%
 def odp_to_pdf(filename):
     """
     This function converts ODP files to PDF
@@ -12,6 +14,7 @@ def odp_to_pdf(filename):
     odp_file = data_dir / filename
     os.system(f'libreoffice --headless --convert-to pdf {odp_file}')
 
+# %%
 def pdf_to_text(filename):
     """
     This function converts pdf text to markdown file.
@@ -23,6 +26,7 @@ def pdf_to_text(filename):
     with open(f'{filename}.txt', 'w') as f:
         f.write(pdf_text)
 
+# %%
 def clean_text(filename):
     """
     This function cleans up bullets and other markings
@@ -39,6 +43,7 @@ def clean_text(filename):
                     new_file.write(str(line))
     os.remove(filename)
 
+# %%
 def extract_images(filename, output_dir):
     """
     This function extracts images from pdfs
