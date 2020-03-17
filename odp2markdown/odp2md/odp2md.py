@@ -6,6 +6,7 @@ from pdfx import PDFx
 
 data_dir = Path('.')
 
+
 # %%
 def odp_to_pdf(filename):
     """
@@ -13,6 +14,7 @@ def odp_to_pdf(filename):
     """
     odp_file = data_dir / filename
     os.system(f'libreoffice --headless --convert-to pdf {odp_file}')
+
 
 # %%
 def pdf_to_text(filename):
@@ -25,6 +27,7 @@ def pdf_to_text(filename):
     pdf_text = pdf_data.get_text()
     with open(f'{filename}.txt', 'w') as f:
         f.write(pdf_text)
+
 
 # %%
 def clean_text(filename):
@@ -43,6 +46,7 @@ def clean_text(filename):
                     new_file.write(str(line))
     os.remove(filename)
 
+
 # %%
 def extract_images(filename, output_dir):
     """
@@ -51,7 +55,7 @@ def extract_images(filename, output_dir):
     """
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-    cmd = ['pdfimages', '-all', filename, 
+    cmd = ['pdfimages', '-all', filename,
            '{}/prefix'.format(output_dir)]
     subprocess.call(cmd)
     print('Images extracted:')
