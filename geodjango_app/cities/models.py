@@ -3,7 +3,7 @@ from django.contrib.gis.db import models as geomodels
 
 
 class City(models.Model):
-    geom = geomodels.PointField()
+    geometry = geomodels.PointField()
     name = models.CharField(max_length=100, blank=False)
 
     class Meta:
