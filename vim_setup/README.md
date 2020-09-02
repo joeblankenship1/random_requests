@@ -1,5 +1,11 @@
 # VIM Setup
 
+### New - NeoVIM config
+
+Recently started using NeoVim, so drag and drop the `init.vim` into `~.config/nvim/`. Then verify a `vim-plug` install and then perform `PlugInstall` with an open NeoVim session.
+
+### Classic Vim config
+
 This is my config file for Python development in VIM.
 
 Make sure you have VIM 7.3 or higher:
